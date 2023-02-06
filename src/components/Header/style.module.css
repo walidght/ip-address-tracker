@@ -1,0 +1,40 @@
+.container {
+  height: 40%;
+  background-image: url(../../assets/pattern-bg.png);
+  background-size: cover;
+  z-index: 30;
+  position: relative;
+}
+
+.container .inputContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  height: 60%;
+}
+
+.container .inputContainer h1 {
+  color: var(--white);
+  font-weight: 400;
+  font-size: 2rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+@media only screen and (min-width: 700px) {
+  .container .inputContainer {
+    height: 80%;
+  }
+}
+/*# sourceMappingURL=style.module.css.map */

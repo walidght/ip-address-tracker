@@ -1,0 +1,29 @@
+.container {
+    height: 40%;
+    background-image: url(../../assets/pattern-bg.png);
+    background-size: cover;
+    z-index: 30;
+    position: relative;
+
+    .inputContainer {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-evenly;
+        height: 60%;
+        h1 {
+            color: var(--white);
+            font-weight: 400;
+            font-size: 2rem;
+            width: fit-content;
+        }
+    }
+}
+
+@media only screen and (min-width: 700px) {
+    .container {
+        .inputContainer {
+            height: 80%;
+        }
+    }
+}
