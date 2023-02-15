@@ -1,7 +1,7 @@
-import L from 'leaflet';
+import { Icon } from 'leaflet';
 import marker from '../../assets/icon-location.svg';
 
-const MarkerIcon = new L.Icon({
+const MarkerIcon = new Icon({
     iconUrl: marker,
     iconRetinaUrl: marker,
     popupAnchor: [-0, -0],

@@ -1,16 +1,15 @@
 import style from './style.module.css';
-import arrowIcon from '../../assets/icon-arrow.svg';
-import { useState } from 'react';
+import { useRef } from 'react';
+import { useSearchInput } from '../../hooks/useSearchInput';
 import isIpAddress from '../../helpers/isIpAddress';
+import arrowIcon from '../../assets/icon-arrow.svg';
 
-const Input = ({ searchQ, setSearchQ }) => {
-    const [value, setValue] = useState(searchQ.value);
-
-    const handleOnChange = (e) => {
-        setValue(e.target.value);
-    };
+const Input = () => {
+    const inputRef = useRef();
+    const [searchQ, setSearchQ] = useSearchInput();
 
     const handleOnClick = () => {
+        const value = inputRef.current.value;
         if (isIpAddress(value)) {
             setSearchQ({ value, type: 'ip' });
         } else {
@@ -21,10 +20,9 @@ const Input = ({ searchQ, setSearchQ }) => {
     return (
         <div className={style.container}>
             <input
+                ref={inputRef}
                 placeholder="Search for any IP address or domain"
                 type="text"
-                value={value}
-                onChange={handleOnChange}
             />
             <button onClick={handleOnClick}>
                 <img src={arrowIcon} alt="" />

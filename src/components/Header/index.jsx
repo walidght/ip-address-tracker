@@ -1,15 +1,15 @@
-import Info from '../Info';
-import Input from '../Input';
 import style from './style.module.css';
+import Input from '../Input';
+import Info from '../Info';
 
-const Header = ({ data, searchQ, setSearchQ }) => {
+const Header = () => {
     return (
         <div className={style.container}>
             <div className={style.inputContainer}>
                 <h1>IP Address Tracker</h1>
-                <Input searchQ={searchQ} setSearchQ={setSearchQ} />
+                <Input />
             </div>
-            <Info data={data} />
+            <Info />
         </div>
     );
 };
